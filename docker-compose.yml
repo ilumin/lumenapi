@@ -6,7 +6,7 @@ services:
     container_name: lumenapi_php
     image: bitnami/php-fpm
     volumes:
-      - .:/app
+      - ./app:/app
 
   server:
     container_name: lumenapi_server
@@ -14,5 +14,5 @@ services:
     ports:
       - 80:80
     volumes:
-      - .:/app
+      - ./app:/app
       - ./site.conf:/bitnami/nginx/conf/vhosts/site.conf
